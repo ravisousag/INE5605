@@ -1,0 +1,5 @@
+-Ligações entre entidades
+-Composição entre  OS e AS
+-Associação simples entre mecânico e atividade de serviço
+-Retirar classe User e colocar atributos dentro do de Person
+-Criar classe estoque 
