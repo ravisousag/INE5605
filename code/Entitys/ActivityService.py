@@ -7,6 +7,7 @@ class ActivityService:
         self.__real_cost = real_cost
         self.__conc_date = conc_date
 
+
     @property
     def id_activity(self):
         return self.__id_activity

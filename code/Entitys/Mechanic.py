@@ -9,6 +9,7 @@ class Mechanic(User):
         self.__id_mec = id_mec
         self.__registration = registration
 
+
     @property
     def id_mec(self):
         return self.__id_mec
