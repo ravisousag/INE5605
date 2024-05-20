@@ -1,4 +1,4 @@
-from Entitys.invetoryitem import InventoryItem:
+from entitys.invetoryitem import InventoryItem:
 from transactionitem import TransactionItem:
 
 def__init__(self):

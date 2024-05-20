@@ -1,4 +1,4 @@
-from Entitys.invoice import Invoice
+from entitys.invoice import Invoice
 from view.invoiceview import InvoiceView
 
 class InvoiceController:

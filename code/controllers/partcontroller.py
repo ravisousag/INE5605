@@ -1,4 +1,4 @@
-from Entitys.part import Part
+from entitys.part import Part
 from view.partview import PartView
 
 class PartController:
