@@ -1,23 +1,17 @@
 class User:
     
 
-    def __init__(self, id_user, name, cpf, zip, username, password):
-        self.__id_user = id_user
-        self.__name = name
-        self.__cpf = cpf
-        self.__zip = zip
-        self.__username = username
-        self.__password = password
-
-
-    @property
-    def id_user(self):
-        return self.__id_user
-    
-
-    @id_user.setter
-    def id_user(self, id_user):
-        self.__id_user = id_user
+    def __init__(self, name: str, cpf: str, zip: int, username: str, password: str):
+        if (isinstance(name, str)):
+            self.__name = name
+        if (isinstance(cpf, str)):
+            self.__cpf = cpf
+        if (isinstance(zip, int)):
+            self.__zip = zip
+        if (isinstance(username, str)):
+            self.__username = username
+        if (isinstance(password, str)):
+            self.__password = password
 
 
     @property

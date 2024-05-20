@@ -1,11 +1,14 @@
 class Invoice:
 
 
-    def __init__(self, id_payment, value, dt_payment, pay_method):
-        self.__id_payment = id_payment
-        self.__value = value
+    def __init__(self, id_payment: int, value: float, dt_payment, pay_method: str):
+        if (isinstance(id_payment, int)):
+            self.__id_payment = id_payment
+        if (isinstance(value, float)):
+            self.__value = value
+        if (isinstance(pay_method, str)):
+            self.__payment_method = pay_method
         self.__dt_payment = dt_payment
-        self.__payment_method = pay_method
     
 
     @property

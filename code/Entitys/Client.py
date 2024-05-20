@@ -2,21 +2,13 @@ from User import User
 
 class Client(User):
 
-    
-    def __init__(self, id_client, cellphone, email):
-        self.__id_client = id_client
-        self.__cellphone = cellphone
-        self.__email = email
 
-    
-    @property
-    def id_client(self):
-        return self.__id_client
-    
-
-    @id_client.setter
-    def id_client(self, id_client):
-        self.__id_client = id_client
+    def __init__(self, name: str, cpf: str, zip: int, username: str, password: str, cellphone: int, email: str):
+        super().__init__(name, cpf, zip, username, password)
+        if (isinstance(cellphone, int)):
+            self.__cellphone = cellphone
+        if (isinstance(email, str)):
+            self.__email = email
 
     
     @property

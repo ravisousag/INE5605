@@ -1,13 +1,19 @@
 class Part:
     
 
-    def __init__(self, id_part, part_name, part_desc, unity_price, qt_stock, brand):
-        self.__id_part = id_part
-        self.__part_name = part_name
-        self.__part_desc = part_desc
-        self.__unity_price = unity_price
-        self.__qt_stock = qt_stock
-        self.__brand = brand
+    def __init__(self, id_part: int, part_name: str, part_desc: str, unity_price: float, qt_stock: int, brand: str):
+        if (isinstance(id_part, int)):
+            self.__id_part = id_part
+        if (isinstance(part_name, str)):
+             self.__part_name = part_name
+        if (isinstance(part_desc, str)):
+            self.__part_desc = part_desc
+        if (isinstance(unity_price, float)):
+            self.__unity_price = unity_price
+        if (isinstance(qt_stock, int)):
+            self.__qt_stock = qt_stock
+        if (isinstance(brand, str)):
+            self.__brand = brand
 
 
     @property

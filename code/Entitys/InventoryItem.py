@@ -1,12 +1,17 @@
 class InventoryItem:
     
 
-    def __init__(self, id_part, part_name, part_desc, qt_stock, id_inventory):
-        self.__id_part = id_part
-        self.__part_name = part_name
-        self.__part_desc = part_desc
-        self.__qt_stock = qt_stock
-        self.__id_inventory = id_inventory
+    def __init__(self, id_part: int, part_name: str, part_desc: str, qt_stock: int, id_inventory: int):
+        if (isinstance(id_part, int)):
+            self.__id_part = id_part
+        if (isinstance(part_name)):
+            self.__part_name = part_name
+        if (isinstance(part_desc)):
+            self.__part_desc = part_desc
+        if (isinstance(qt_stock, int)):
+            self.__qt_stock = qt_stock
+        if (isinstance(id_inventory, int)):
+            self.__id_inventory = id_inventory
 
 
     @property

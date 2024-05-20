@@ -1,22 +1,17 @@
 class Jetski:
-    def __init__(self, id_jetski, brand, model, jet_year, serial_number, propulsion_type, jet_obs):
-        self._id_jetski = id_jetski
-        self._brand = brand
-        self._model = model
-        self._jet_year = jet_year
-        self._serial_number = serial_number
-        self._propulsion_type = propulsion_type
-        self._jet_obs = jet_obs
-
-
-    @property
-    def id_jetski(self):
-        return self._id_jetski
-
-
-    @id_jetski.setter
-    def id_jetski(self, value):
-        self._id_jetski = value
+    def __init__(self, brand: str, model: str, jet_year: int, serial_number: str, propulsion_type: str, jet_obs: str):
+        if(isinstance(brand, str)):
+            self._brand = brand
+        if(isinstance(model)):
+            self._model = model
+        if(isinstance(jet_year, int)):
+            self._jet_year = jet_year
+        if(isinstance(serial_number, str)):
+            self._serial_number = serial_number
+        if(isinstance(propulsion_type, str)):
+            self._propulsion_type = propulsion_type
+        if(isinstance(jet_obs, str)):
+            self._jet_obs = jet_obs
 
 
     @property

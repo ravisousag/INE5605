@@ -1,14 +1,21 @@
+from Entitys.ActivityService import ActivityService
+
+
 class OrderService:
 
-    def __init__(self, id_order, dt_entry, estimated_de_dt, dt_exit, state_order, obs_order, or_service_cost):
-        self.__id_order = id_order
+    def __init__(self, id_order: int, dt_entry, estimated_de_dt, dt_exit, state_order: str, obs_order: str, or_service_cost: float):
+        if (isinstance(id_order, int)):
+            self.__id_order = id_order
+        if (isinstance(state_order, str)):
+            self.__state_order = state_order
+        if (isinstance(obs_order, str)):
+            self.__obs_order = obs_order
+        if (isinstance(or_service_cost, float)):
+            self.__or_service_cost = or_service_cost
         self.__dt_entry = dt_entry
         self.__estimated_de_dt = estimated_de_dt
         self.__dt_exit = dt_exit
-        self.__state_order = state_order
-        self.__obs_order = obs_order
-        self.__or_service_cost = or_service_cost
-
+        self.__activity_os = ActivityService
 
     @property
     def id_oder(self):
@@ -44,7 +51,12 @@ class OrderService:
     def or_service_cost(self):
         return self.__or_service_cost
     
-
+    
+    @property
+    def acitivity_os(self):
+        return self.__activity_os
+    
+    
     @id_oder.setter
     def id_order(self, id_order):
         self.__id_order = id_order
@@ -78,3 +90,7 @@ class OrderService:
     @or_service_cost.setter
     def or_service_cost(self, or_service_cost):
         self.__or_service_cost = or_service_cost
+        
+    
+    def add_activity_os(self, activitys_os):
+        self.__activity_os.append(activitys_os)

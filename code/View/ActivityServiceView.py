@@ -1,0 +1,2 @@
+class ActivityServiceView:
+    pass
