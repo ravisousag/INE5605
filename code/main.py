@@ -1,4 +1,4 @@
-from Controllers.SystemController import SystemController
+from controllers.SystemController import SystemController
 
 
 if __name__ == "__main__":

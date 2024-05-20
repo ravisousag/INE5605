@@ -1,6 +1,6 @@
 from controllers.ActivityServiceController import AcitivityServiceController
 class SystemView:
-    def screen_options():
+    def screen_options(self):
         print("""
 ========= Bem vindo ao JetEase =========
 1- Cliente
