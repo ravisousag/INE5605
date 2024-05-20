@@ -1,2 +1,2 @@
-class ClientView:
+class ClientView():
     pass

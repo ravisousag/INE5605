@@ -52,12 +52,13 @@ class SystemController:
         self.__ac_service_controller.open_screen()
 
     def close_system(self):
-        exit(0)
+        print('Sistema encerrado!')
+        exit(5)
 
     def open_screen(self):
         options = {1: self.insert_client, 2: self.insert_mechanic, 3: self.insert_order_service,
                    4: self.insert_ac_service,
-                   0: self.close_system}
+                   5: self.close_system}
 
         while True:
             choose_option = self.__system_screen.screen_options()

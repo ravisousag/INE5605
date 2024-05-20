@@ -1,2 +1,2 @@
-class OrderServiceView:
+class OrderServiceView():
     pass
