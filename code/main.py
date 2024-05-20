@@ -1,15 +1,5 @@
-import getpass
-
-class Main:
+from Controllers.SystemController import SystemController
 
 
-    login = str(input("""
-    ============ Bem vindo ao JetEase ============
-    Insira seu login: """))
-    password = getpass.getpass("""
-    Insira sua senha: """
-    )
-    
-    def menu():
-        print(""" 
-    """)
+if __name__ == "__main__":
+    SystemController().start_system()

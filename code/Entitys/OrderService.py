@@ -1,4 +1,4 @@
-from Entitys.ActivityService import ActivityService
+from entitys.ActivityService import ActivityService
 
 
 class OrderService:
@@ -15,8 +15,9 @@ class OrderService:
         self.__dt_entry = dt_entry
         self.__estimated_de_dt = estimated_de_dt
         self.__dt_exit = dt_exit
-        self.__activity_os = ActivityService
-
+        self.__activities_os = []
+        
+        
     @property
     def id_oder(self):
         return self.__id_order
@@ -92,5 +93,11 @@ class OrderService:
         self.__or_service_cost = or_service_cost
         
     
-    def add_activity_os(self, activitys_os):
-        self.__activity_os.append(activitys_os)
+    def add_activity_os(self, id_activity, desc_service, estimated_cost, real_cost, conc_date, jetski):
+        activity_service = ActivityService(id_activity, desc_service, estimated_cost, real_cost, conc_date, jetski)
+        self.__activities_os.append(activity_service)
+    
+    
+    def list_activities(self):
+        for activity_os in self.__activities_os:
+            print(activity_os)

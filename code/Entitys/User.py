@@ -1,6 +1,9 @@
-class User:
-    
+from abc import ABC, abstractmethod
 
+class User(ABC):
+    
+    
+    @abstractmethod
     def __init__(self, name: str, cpf: str, zip: int, username: str, password: str):
         if (isinstance(name, str)):
             self.__name = name
@@ -62,4 +65,3 @@ class User:
     @password.setter
     def password(self, password):
         self.__password = password
-    
