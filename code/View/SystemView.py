@@ -1,4 +1,4 @@
-from controllers.ActivityServiceController import AcitivityServiceController
+
 class SystemView:
     def screen_options(self):
         print("""
@@ -7,16 +7,12 @@ class SystemView:
 2- Mecânico
 3- Ordem de serviço
 4- Atividade de serviço
-0- Sair
+5- Sair
 """)
         while True:
             try:
                 option = int(input('Insira a opção: '))
+                if option in range(1, 6):
+                    return option
             except Exception as erro: 
                  print('Opção inválida. Insira opcção contida no menu\n')
-            if not option in range(0, 4):
-                print('Opção inválida. Insira opcção contida no menu\n')
-            else:
-                return option
-    
-    screen_options()

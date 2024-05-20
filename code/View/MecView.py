@@ -1,5 +1,5 @@
 class MecView():
-    
+
     def screen_options(self):
         print("""
               ====== Tela Mecânico ======
@@ -11,5 +11,4 @@ class MecView():
               """)
         option = int(input("Escolha a opção: "))
         return option
-    
-    
+
