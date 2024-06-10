@@ -1,18 +1,36 @@
+import PySimpleGUI as sg
 
 class SystemView:
+    def __init__(self):
+        self.__window = None
+        self.init_components()
+        
+        
+        
     def screen_options(self):
-        print("""
-========= Bem vindo ao JetEase =========
-1- Cliente
-2- Mecânico
-3- Ordem de serviço
-4- Atividade de serviço
-5- Sair
-""")
         while True:
-            try:
-                option = int(input('Insira a opção: '))
-                if option in range(1, 6):
-                    return option
-            except Exception as erro: 
-                 print('Opção inválida. Insira opcção contida no menu\n')
+            self.init_components()
+            button, values = self.__window.read()
+            
+            self.close()
+            print(button)
+            return button
+            
+                      
+    def close(self):
+        self.__window.Close()
+                     
+    
+    def init_components(self):
+        sg.ChangeLookAndFeel('Dark')
+        layout = [
+            [sg.Text('Bem vindo ao sistema!', font=("Helvica",25))],
+            [sg.Text('Escolha sua opção', font=("Helvica",15))],
+            [sg.Button('Cliene', key=1)],
+            [sg.Button('Mecânico', key=2)],
+            [sg.Button('Ordem de serviço', key=3)],
+            [sg.Button('Atividade de serviço', key=4)],
+            [sg.Cancel('Cancelar',button_color='red', key=5)]     
+        ]
+        self.__window = sg.Window('Sistema mêcanica').Layout(layout)
+        

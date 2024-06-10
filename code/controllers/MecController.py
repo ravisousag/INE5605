@@ -74,7 +74,9 @@ class MecController():
         
     
     def open_screen(self):
-        options = {1: self.insert_mec, 2: self.alter_mec, 3: self.delete_mec,
+        options = {1: self.insert_mec, 
+                   2: self.alter_mec, 
+                   3: self.delete_mec,
                    4: self.list_mec,
                    5: self.go_back}
         
